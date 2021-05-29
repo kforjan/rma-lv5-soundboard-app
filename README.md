@@ -1,16 +1,27 @@
-# rma_lv5_soundboard_app
+# Soundboard app - Flutter application for playing sounds
 
-A new Flutter project.
+A Flutter application for playing sounds made for Mobile Application Development class.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Task
 
-A few resources to get you started if this is your first Flutter project:
+Create a soundboard application that will play a specific sound by clicking on an image on the interface.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Used packages
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  * [audioplayers](https://pub.dev/packages/audioplayers) &nbsp; - &nbsp; playing sounds from the local storage
+  * [path_provider](https://pub.dev/packages/path_provider) &nbsp; - &nbsp; finding commonly used locations on the filesystem
+
+## Setup
+  1. Clone the repository using the link below:
+  ```
+  https://github.com/kforjan/rma-lv5-soundboard-app.git
+  ```
+  2. Go to the project root and execute the following commands:
+  ```
+  flutter pub get
+  flutter run
+  ```
+
+## Preview
+![Home preview](https://i.imgur.com/LUrX2s8.png)
