@@ -6,7 +6,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('Soundboard'),
+      ),
       body: Center(
         child: GridView(
           shrinkWrap: true,
@@ -17,7 +19,9 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  print('dad');
+                },
                 child: Image.asset(
                   'assets/images/dog.jpg',
                   fit: BoxFit.cover,
