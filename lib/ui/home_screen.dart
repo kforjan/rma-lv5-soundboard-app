@@ -77,6 +77,5 @@ class HomeScreen extends StatelessWidget {
     assetsAudioPlayer.open(
       Audio('assets/sounds/$localPath'),
     );
-    assetsAudioPlayer.play();
   }
 }
