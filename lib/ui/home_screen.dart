@@ -1,14 +1,11 @@
-import 'dart:io';
-
-import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key}) : super(key: key);
-  final AudioPlayer audioPlayer = AudioPlayer();
-
+  final assetsAudioPlayer = AssetsAudioPlayer();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,11 +74,8 @@ class HomeScreen extends StatelessWidget {
   }
 
   playLocal(String localPath) async {
-    final file = new File('${(await getTemporaryDirectory()).path}/music.mp3');
-    await file.writeAsBytes(
-        (await rootBundle.load('assets/sounds/${localPath}'))
-            .buffer
-            .asUint8List());
-    final result = await audioPlayer.play(file.path, isLocal: true);
+    assetsAudioPlayer.open(
+      Audio('assets/sounds/$localPath'),
+    );
   }
 }
